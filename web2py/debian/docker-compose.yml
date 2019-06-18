@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  web2py:
+    build: .
+    image: smithmicro/web2py:debian
+    ports:
+      - 8080:8080
+    environment:
+      - WEB2PY_PASSWORD=password
+      - WEB2PY_ADMIN_SECURITY_BYPASS=true
+  

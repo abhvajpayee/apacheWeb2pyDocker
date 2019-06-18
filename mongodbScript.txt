@@ -1,0 +1,29 @@
+db.getSiblingDB("DAECA").updateUser(
+    "abhishek",
+    {
+        customData: {},
+
+        roles: [{ "role": "readWrite", "db": "DAECA" }, { "role": "dbAdmin", "db": "DAECA" }, { "role": "clusterMonitor", "db": "admin" }],
+        /*All built-in Roles 
+         Database User Roles: read|readWrite
+         Database Admin Roles: dbAdmin|dbOwner|userAdmin
+         Cluster Admin Roles: clusterAdmin|clusterManager|clusterMonitor|hostManager
+         Backup and Restoration Roles: backup|restore
+         All-Database Roles: readAnyDatabase|readWriteAnyDatabase|userAdminAnyDatabase|dbAdminAnyDatabase
+         Superuser Roles: root 
+        */
+
+        //pwd: "<cleartext password>",
+
+        //authenticationRestrictions: [
+        //            {
+        //              clientSource: ["<IP>" | "<CIDR range>", ...],
+        //              serverAddress: ["<IP>", | "<CIDR range>", ...]
+        //            },
+        //         ],
+
+        //mechanisms: [ "<SCRAM-SHA-1|SCRAM-SHA-256>", ... ], 
+
+        //passwordDigestor: "<server|client>"
+    }
+)
